@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 
 const Hog = (props) => {
     return(
-      <div>
+      <div className="pigTile">
         <img src={require(`../hog-imgs/${props.hog.image}.jpg`)}></img>
       </div>
     )
