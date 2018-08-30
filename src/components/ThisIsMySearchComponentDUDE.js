@@ -11,16 +11,11 @@ class SearchComponent extends Component {
   render(){
     return(
       <div>
-        Filter by <br/>
-        {/* <form>
-          Name: <input type="radio" name='name'/>
-          Weight: <input type="radio" name='weight'/><br/>
-          None: <input type="radio" name='none' checked/><br/>
-        </form> */}
-        <form>
+        Sort by <br/>
+        <form onChange={this.props.sortHogs}>
           <input type="radio" name="filter" value="name" /> Name<br/>
           <input type="radio" name="filter" value="weight"/> Weight<br/>
-          <input type="radio" name="filter" value="none" checked/> None
+          <input type="radio" name="filter" value="none" /> None
         </form>
 
         Greased <input type='checkbox'/>

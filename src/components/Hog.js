@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 
-// const hogImageMapper ={
-//   "Mudblood": "../hog-imgs/mudblood.jpg"
-// }
-
 
 class Hog extends Component {
   constructor(props){
