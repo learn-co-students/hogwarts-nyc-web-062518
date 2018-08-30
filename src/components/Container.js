@@ -88,10 +88,12 @@ class Container extends Component{
     render(){
       return (
         <div>
-          <button onClick={this.handleNameSort}>SORT BY NAME</button>
-          <button onClick={this.handleWeightSort}>SORT BY WEIGHT</button>
-          <button onClick={this.filterByGrease}>FILTER BY GREASE</button>
-          <button onClick={this.giveItBack}>GIVE MY STUFF BACK BRUH</button>
+
+          <p><button onClick={this.handleNameSort}>SORT BY NAME</button></p>
+          <p><button onClick={this.handleWeightSort}>SORT BY WEIGHT</button></p>
+          <p><button onClick={this.filterByGrease}>FILTER BY GREASE</button></p>
+          <p><button onClick={this.giveItBack}>GIVE MY STUFF BACK BRUH</button></p>
+          <br/>
           <AllHogs handleShowDetails={this.handleShowDetails} allHogs={this.state.allHogs}/>
         </div>
       )
