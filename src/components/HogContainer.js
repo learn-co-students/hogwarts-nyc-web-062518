@@ -10,6 +10,16 @@ class HogContainer extends Component {
     }
   }
 
+  filterHogs = (event) => {
+    if (event.target.checked){
+      let filteredHogs = this.state.hogsData.filter( hog => hog.greased)
+      this.setState({hogsData: filteredHogs})
+    } else {
+      this.setState({hogsData: this.props.hogsData})
+    }
+  }
+
+
   hogMapper = (props) =>{
     return this.state.hogsData.map(hog => {
       return(
@@ -21,7 +31,7 @@ class HogContainer extends Component {
   render(){
     return(
       <div>
-        <SearchComponent sortHogs={this.sortHogs}/>
+        <SearchComponent filterHogs={this.filterHogs} sortHogs={this.sortHogs}/>
         {this.hogMapper()}
       </div>
     )

@@ -18,7 +18,7 @@ class SearchComponent extends Component {
           <input type="radio" name="filter" value="none" /> None
         </form>
 
-        Greased <input type='checkbox'/>
+        Greased <input onChange={this.props.filterHogs} type='checkbox'/>
       </div>
     )
   }
