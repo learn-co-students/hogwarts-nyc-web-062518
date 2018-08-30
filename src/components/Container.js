@@ -22,7 +22,7 @@ class Container extends Component{
 
     handleShowDetails(e){
       const eventTargetName = e.target.nextSibling.firstElementChild.innerText
-      console.log('hi')
+      // console.log('hi')
 
 
       let hogs = this.state.allHogs.map(hog=> {
