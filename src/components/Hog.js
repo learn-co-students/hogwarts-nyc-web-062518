@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Hogslist from './Hogslist'
 
 
 class Hog extends Component {

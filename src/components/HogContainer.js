@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Hog from './Hog'
 import SearchComponent from './ThisIsMySearchComponentDUDE'
+import Hogslist from './Hogslist'
 
 class HogContainer extends Component {
   constructor(props) {
@@ -28,15 +29,6 @@ class HogContainer extends Component {
     })
   }
 
-  render(){
-    return(
-      <div>
-        <SearchComponent filterHogs={this.filterHogs} sortHogs={this.sortHogs}/>
-        {this.hogMapper()}
-      </div>
-    )
-  }
-
   sortHogs = (event) => {
     let hogsArray = [...this.state.hogsData]
     if (event.target.value === "name") {
@@ -58,6 +50,16 @@ class HogContainer extends Component {
       this.setState({hogsData: this.props.hogsData})
     }
   }
+
+  render(){
+    return(
+      <div>
+        <SearchComponent filterHogs={this.filterHogs} sortHogs={this.sortHogs}/>
+        <Hogslist hogsData={this.state.hogsData} />
+      </div>
+    )
+  }
+
 
 
 }
