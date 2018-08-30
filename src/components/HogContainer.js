@@ -12,14 +12,14 @@ class HogContainer extends Component {
   hogMapper = (props) =>{
     return this.props.hogsData.map(hog =>{
       return(
-        <Hog />
+        <Hog hog={hog}/>
       )
     })
   }
 
   render(){
     return(
-      <div>{this.hogMapper}</div>
+      <div>{this.hogMapper()}</div>
     )
   }
 
