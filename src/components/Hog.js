@@ -5,12 +5,50 @@ import React, { Component } from 'react';
 // }
 
 
-const Hog = (props) => {
+class Hog extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      displaySide: this.cardFront()
+    }
+  }
+
+
+  handleClick = () => {
+    if (this.state.displaySide.type === 'img'){
+      this.setState({displaySide: this.cardBack()})
+    } else {
+      this.setState({displaySide: this.cardFront()})
+    }
+  }
+
+
+  cardFront = () => {
+    return (<img src={require(`../hog-imgs/${this.props.hog.image}.jpg`)}></img>)
+  }
+
+  cardBack = () => {
+    return (<div>
+      <h2> Name: {this.props.hog.name} </h2>
+      <h3> Speciality: {this.props.hog.speciality} </h3>
+      <h3> Greased: {this.props.hog.greased ? "True" : "False"} </h3>
+      <h3> Weight: {this.props.hog['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']} </h3>
+        <h3> Highest Medal Achieved: {this.props.hog['highest medal achieved']} </h3>
+        </div>
+
+   )
+  }
+
+  render(){
     return(
-      <div className="pigTile">
-        <img src={require(`../hog-imgs/${props.hog.image}.jpg`)}></img>
+      <div onClick={this.handleClick} className="pigTile">
+        {this.state.displaySide}
       </div>
     )
+  }
+
+
 }
 
 export default Hog
