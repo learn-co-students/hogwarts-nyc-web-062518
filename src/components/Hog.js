@@ -7,16 +7,16 @@ class Hog extends Component {
     super(props)
 
     this.state = {
-      displaySide: this.cardFront()
+      displaySide: "front"
     }
   }
 
 
   handleClick = () => {
-    if (this.state.displaySide.type === 'img'){
-      this.setState({displaySide: this.cardBack()})
+    if (this.state.displaySide === 'front'){
+      this.setState({displaySide: "back"})
     } else {
-      this.setState({displaySide: this.cardFront()})
+      this.setState({displaySide: "front"})
     }
   }
 
@@ -40,7 +40,7 @@ class Hog extends Component {
   render(){
     return(
       <div onClick={this.handleClick} className="pigTile">
-        {this.state.displaySide}
+        {this.state.displaySide === "front" ? this.cardFront() : this.cardBack()}
       </div>
     )
   }
