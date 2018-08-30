@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Hog from './Hog'
+import SearchComponent from './ThisIsMySearchComponentDUDE'
 
 class HogContainer extends Component {
   constructor(props) {
@@ -12,14 +13,17 @@ class HogContainer extends Component {
   hogMapper = (props) =>{
     return this.props.hogsData.map(hog =>{
       return(
-        <Hog hog={hog}/>
+        <Hog hog={hog} className='ui eight wide column'/>
       )
     })
   }
 
   render(){
     return(
-      <div>{this.hogMapper()}</div>
+      <div>
+        <SearchComponent />
+        {this.hogMapper()}
+      </div>
     )
   }
 

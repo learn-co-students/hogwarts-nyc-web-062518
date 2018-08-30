@@ -31,7 +31,7 @@ class Hog extends Component {
   cardBack = () => {
     return (<div>
       <h2> Name: {this.props.hog.name} </h2>
-      <h3> Speciality: {this.props.hog.speciality} </h3>
+      <h3> Specialty: {this.props.hog.specialty} </h3>
       <h3> Greased: {this.props.hog.greased ? "True" : "False"} </h3>
       <h3> Weight: {this.props.hog['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']} </h3>
         <h3> Highest Medal Achieved: {this.props.hog['highest medal achieved']} </h3>

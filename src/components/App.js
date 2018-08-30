@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <HogContainer hogsData={hogs}/>
+        <HogContainer hogsData={hogs} className='ui grid container'/>
       </div>
     )
   }
